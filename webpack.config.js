@@ -11,7 +11,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
     {
       mode,
       plugins: [
-        new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
           template: path.join(CLIENT_ROOT, "views/index-template.html"),
           filename: "index.html",

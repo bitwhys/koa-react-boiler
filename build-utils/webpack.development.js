@@ -1,4 +1,5 @@
 const path = require("path")
+const webpack = require("webpack")
 const { CLIENT_ROOT } = require("./path-aliases")
 
 module.exports = () => ({
@@ -21,4 +22,5 @@ module.exports = () => ({
   devServer: {
     overlay: true,
   },
+  plugins: [new webpack.ProgressPlugin()],
 })

@@ -32,10 +32,5 @@ module.exports = () => ({
       filename: "main.[hash].css",
       chunkFilename: "main.[id].[hash].css",
     }),
-    new HtmlWebpackPlugin({
-      template: path.join(CLIENT_ROOT, "views/index-template.html"),
-      filename: "index.html",
-      inject: "body",
-    }),
   ],
 })

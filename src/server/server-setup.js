@@ -4,7 +4,7 @@ const serve = require("koa-static")
 const mount = require("koa-mount")
 const views = require("koa-views")
 
-const DEV_MODE = process.env.NODE_ENV || "development"
+const DEV_MODE = process.env.NODE_ENV || "production"
 
 const routes = require("./routes")
 

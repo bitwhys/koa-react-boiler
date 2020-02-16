@@ -12,8 +12,9 @@
     "react"
   ],
   "scripts": {
+    "build": "yarn build:client",
     "build:client": "webpack -p --env.mode production",
-    "development": "nodemon src/server/app.js",
+    "development": "NODE_ENV=development nodemon src/server/app.js",
     "format": "prettier --write \"{src,build-utils}/**/*.{js,jsx}\"",
     "start": "node src/server/app.js",
     "test": "echo 'no test'",

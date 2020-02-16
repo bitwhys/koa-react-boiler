@@ -1,3 +1,4 @@
+const chalk = require("chalk")
 const path = require("path")
 const requestLogger = require("koa-logger")
 const serve = require("koa-static")
@@ -7,8 +8,6 @@ const views = require("koa-views")
 const DEV_MODE = process.env.NODE_ENV !== "production"
 
 const routes = require("./routes")
-
-const { logger } = global
 
 const pathToViews = path.join(__dirname, "./../../client/views")
 const pathToStatic = path.join(__dirname, "./../../client/static")
@@ -26,7 +25,7 @@ module.exports = async app => {
     try {
       await next()
     } catch (err) {
-      logger.error(err)
+      console.error(err)
       this.status = err.status || 500
       this.body = {
         errors: [{ _global: "An error has occurred" }],

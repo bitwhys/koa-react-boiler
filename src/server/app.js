@@ -1,3 +1,4 @@
+const chalk = require("chalk")
 const path = require("path")
 const Koa = require("koa")
 require("dotenv").config({ path: path.resolve(__dirname, "..", "..", ".env") })
@@ -9,6 +10,7 @@ global.logger = require("./logger")
 
 const { logger } = global
 const app = new Koa()
+
 setupServer(app).catch(e => console.error(e))
 app.listen(PORT, () => {
   logger.warn(

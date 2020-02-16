@@ -1,6 +1,6 @@
 const Router = require("koa-router")
 
-const DEV_MODE = process.env.NODE_ENV || "production"
+const DEV_MODE = process.env.NODE_ENV !== "production"
 const { API_URL, LANDING_URL, WEB_SOCKET_URL } = process.env
 // const { ACCESS_TOKEN_COOKIE_NAME } = require('../constants');
 

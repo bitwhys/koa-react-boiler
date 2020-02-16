@@ -1,3 +1,4 @@
+const chalk = require("chalk")
 const path = require("path")
 const webpack = require("webpack")
 const koaWebpack = require("koa-webpack")
@@ -6,6 +7,7 @@ const getWebpackConfig = require("../../../webpack.config")
 const config = getWebpackConfig({ mode: "development" })
 
 module.exports = async app => {
+  console.log(chalk.bold.red(`---- DEBUG : [@hmr ] ----`))
   // workaround for docker containers
   const host = process.env.HRM_HOST || "localhost"
   const middleware = await koaWebpack({

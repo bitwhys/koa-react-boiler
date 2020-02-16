@@ -12,11 +12,11 @@
     "react"
   ],
   "scripts": {
-    "build": "yarn build:client",
+    "build": "NODE_ENV=production yarn build:client",
     "build:client": "webpack -p --env.mode production",
     "development": "NODE_ENV=development nodemon src/server/app.js",
     "format": "prettier --write \"{src,build-utils}/**/*.{js,jsx}\"",
-    "start": "node src/server/app.js",
+    "start": "NODE_ENV=production node src/server/app.js",
     "test": "echo 'no test'",
     "test:watch": "jest --watch"
   },

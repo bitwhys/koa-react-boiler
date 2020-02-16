@@ -1,0 +1,5 @@
+module.exports.createUniqueIdGenerator = require("./helpers/create-unique-id-generator")
+module.exports.generateScopedName = require("./helpers/create-unique-id-generator")
+module.exports.getComponentName = require("./helpers/create-unique-id-generator")
+module.exports.loadPresets = require("./helpers/load-presets")
+module.exports.resolveAlias = require("./helpers/resolve-alias")

@@ -1,0 +1,100 @@
+{
+  "name": "koa-react-boiler",
+  "version": "0.1.0",
+  "description": "Koa react",
+  "private": false,
+  "repository": "git@github.com:bitwhys/koa-react-boiler.git",
+  "main": "src/server/app.js",
+  "author": "George Bockari <bitwhys@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "koa",
+    "react"
+  ],
+  "scripts": {
+    "build:client": "webpack -p --env.mode production",
+    "development": "nodemon src/server/app.js",
+    "format": "prettier --write \"{src,build-utils}/**/*.{js,jsx}\"",
+    "start": "node src/server/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@paralect/common-logger": "0.1.10",
+    "babel-plugin-lodash": "3.3.4",
+    "dotenv": "^8.2.0",
+    "file-loader": "4.0.0",
+    "html-webpack-plugin": "3.2.0",
+    "incstr": "1.2.3",
+    "koa": "2.7.0",
+    "koa-logger": "3.2.1",
+    "koa-mount": "4.0.0",
+    "koa-router": "7.4.0",
+    "koa-static": "5.0.0",
+    "koa-views": "6.2.0",
+    "koa-webpack": "5.2.4",
+    "lodash": "4.17.14",
+    "lodash-webpack-plugin": "0.11.5",
+    "nodemon": "1.19.1",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-hot-loader": "4.12.7",
+    "webpack": "4.35.3",
+    "webpack-cli": "3.3.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.0",
+    "@babel/core": "7.5.4",
+    "@babel/plugin-proposal-class-properties": "7.5.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.5.2",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/polyfill": "7.4.4",
+    "@babel/preset-env": "7.5.4",
+    "@babel/preset-react": "7.0.0",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/webpack": "^4.41.6",
+    "babel-eslint": "10.0.3",
+    "babel-loader": "8.0.6",
+    "babel-plugin-module-resolver": "3.2.0",
+    "chalk": "^3.0.0",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "6.7.2",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "7.17.0",
+    "husky": "4.0.0-beta.5",
+    "lint-staged": "9.5.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "^1.19.1",
+    "style-loader": "0.23.1",
+    "url-loader": "2.0.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
